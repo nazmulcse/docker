@@ -24,3 +24,9 @@ sudo docker compose up -d
 sudo docker compose exec app composer require laravel/octane
 sudo docker compose exec app php artisan octane:install
 sudo docker compose exec app php artisan octane:start --host=0.0.0.0 --port=8000
+```
+
+### Run Octane start command in brackground
+
+```bash
+sudo docker compose exec -d app php artisan octane:start --host=0.0.0.0 --port=8000		## Only added -d flag after exec
